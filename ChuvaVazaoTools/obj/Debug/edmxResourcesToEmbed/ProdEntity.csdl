@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ESTUDO_PVModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Postos">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="dt_entrada" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="nome" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="bacia" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="submercado" Type="Int32" />
+    <Property Name="produtibilidade" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="observacao" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="chuvaVazao" Type="Int32" />
+    <Property Name="previvaz" Type="Int32" />
+    <Property Name="calculado" Type="Int32" />
+    <Property Name="especial" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="ESTUDO_PVEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Postos" EntityType="Self.Postos" />
+  </EntityContainer>
+</Schema>

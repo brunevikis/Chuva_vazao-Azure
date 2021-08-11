@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ESTUDO_PVModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Postos">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="dt_entrada" Type="datetime" Nullable="false" />
+    <Property Name="nome" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="bacia" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="submercado" Type="int" />
+    <Property Name="produtibilidade" Type="decimal" Precision="18" Scale="8" />
+    <Property Name="observacao" Type="varchar(max)" />
+    <Property Name="chuvaVazao" Type="int" />
+    <Property Name="previvaz" Type="int" />
+    <Property Name="calculado" Type="int" />
+    <Property Name="especial" Type="int" />
+  </EntityType>
+  <EntityContainer Name="ESTUDO_PVModelStoreContainer">
+    <EntitySet Name="Postos" EntityType="Self.Postos" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

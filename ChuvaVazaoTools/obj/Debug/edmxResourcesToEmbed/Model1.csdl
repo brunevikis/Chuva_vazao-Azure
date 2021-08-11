@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="IPDOModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="IPDOEntities1" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="CONSULTA_VAZAO_RDH" EntityType="IPDOModel.CONSULTA_VAZAO_RDH" />
+    <EntitySet Name="CONSULTA_VAZAO" EntityType="IPDOModel.CONSULTA_VAZAO" />
+    <EntitySet Name="Precipitacoes" EntityType="IPDOModel.PrecipitacaoMdl" />
+    <EntitySet Name="Vazoes_Observadas" EntityType="IPDOModel.Vazoes_Observadas" />
+  </EntityContainer>
+  <EntityType Name="CONSULTA_VAZAO_RDH">
+    <Key>
+      <PropertyRef Name="posto" />
+      <PropertyRef Name="data" />
+    </Key>
+    <Property Name="data" Type="DateTime" Precision="3" Nullable="false" />
+    <Property Name="posto" Type="Int32" Nullable="false" />
+    <Property Name="qnat" Type="Int32" />
+    <Property Name="qinc" Type="Int32" />
+    <Property Name="fonte" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CONSULTA_VAZAO">
+    <Key>
+      <PropertyRef Name="data" />
+      <PropertyRef Name="posto" />
+    </Key>
+    <Property Name="data" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="posto" Type="Int32" Nullable="false" />
+    <Property Name="qnat" Type="Int32" Nullable="false" />
+    <Property Name="qinc" Type="Int32" Nullable="false" />
+    <Property Name="fonte" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PrecipitacaoMdl">
+    <Key>
+      <PropertyRef Name="Data" />
+      <PropertyRef Name="Bacia" />
+      <PropertyRef Name="SubBacia" />
+      <PropertyRef Name="Fonte" />
+    </Key>
+    <Property Name="Data" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DataAtualizacao" Type="DateTime" Precision="3" />
+    <Property Name="Bacia" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SubBacia" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Precipitacao1" Type="Double" Nullable="false" />
+    <Property Name="Fonte" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Vazoes_Observadas">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Data" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Cod_Posto" Type="Int32" Nullable="false" />
+    <Property Name="Nome_Posto" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Bacia" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Tipo_Vazao" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Vazao" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Data_Update" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+</Schema>

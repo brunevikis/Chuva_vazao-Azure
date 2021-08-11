@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="IPDOModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="IPDOModelStoreContainer">
+          <EntitySet Name="ACOMPH" EntityType="IPDOModel.Store.ACOMPH" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="ACOMPH">
+          <Key>
+            <PropertyRef Name="Data" />
+            <PropertyRef Name="Posto" />
+          </Key>
+          <Property Name="Data" Type="datetime" Nullable="false" />
+          <Property Name="Posto" Type="int" Nullable="false" />
+          <Property Name="Vaz_nat" Type="int" Nullable="false" />
+          <Property Name="Vaz_Inc" Type="int" Nullable="false" />
+          <Property Name="Reserv" Type="decimal" Nullable="false" Precision="5" Scale="2" />
+          <Property Name="Data_Update" Type="datetime" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="IPDOModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="AcomphEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="ACOMPH" EntityType="IPDOModel.ACOMPH" />
+        </EntityContainer>
+        <EntityType Name="ACOMPH">
+          <Key>
+            <PropertyRef Name="Data" />
+            <PropertyRef Name="Posto" />
+          </Key>
+          <Property Name="Data" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Posto" Type="Int32" Nullable="false" />
+          <Property Name="Vaz_nat" Type="Int32" Nullable="false" />
+          <Property Name="Vaz_Inc" Type="Int32" Nullable="false" />
+          <Property Name="Reserv" Type="Decimal" Nullable="false" Precision="5" Scale="2" />
+          <Property Name="Data_Update" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="IPDOModelStoreContainer" CdmEntityContainer="AcomphEntities">
+          <EntitySetMapping Name="ACOMPH">
+            <EntityTypeMapping TypeName="IPDOModel.ACOMPH">
+              <MappingFragment StoreEntitySet="ACOMPH">
+                <ScalarProperty Name="Data" ColumnName="Data" />
+                <ScalarProperty Name="Posto" ColumnName="Posto" />
+                <ScalarProperty Name="Vaz_nat" ColumnName="Vaz_nat" />
+                <ScalarProperty Name="Vaz_Inc" ColumnName="Vaz_Inc" />
+                <ScalarProperty Name="Reserv" ColumnName="Reserv" />
+                <ScalarProperty Name="Data_Update" ColumnName="Data_Update" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

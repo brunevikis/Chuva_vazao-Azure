@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="IPDOModelStoreContainer" CdmEntityContainer="IPDOEntities1">
+    <EntitySetMapping Name="CONSULTA_VAZAO">
+      <EntityTypeMapping TypeName="IPDOModel.CONSULTA_VAZAO">
+        <MappingFragment StoreEntitySet="CONSULTA_VAZAO">
+          <ScalarProperty Name="fonte" ColumnName="fonte" />
+          <ScalarProperty Name="qinc" ColumnName="qinc" />
+          <ScalarProperty Name="qnat" ColumnName="qnat" />
+          <ScalarProperty Name="posto" ColumnName="posto" />
+          <ScalarProperty Name="data" ColumnName="data" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CONSULTA_VAZAO_RDH">
+      <EntityTypeMapping TypeName="IsTypeOf(IPDOModel.CONSULTA_VAZAO_RDH)">
+        <MappingFragment StoreEntitySet="CONSULTA_VAZAO_RDH">
+          <ScalarProperty Name="fonte" ColumnName="fonte" />
+          <ScalarProperty Name="qinc" ColumnName="qinc" />
+          <ScalarProperty Name="qnat" ColumnName="qnat" />
+          <ScalarProperty Name="posto" ColumnName="posto" />
+          <ScalarProperty Name="data" ColumnName="data" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Precipitacoes">
+      <EntityTypeMapping TypeName="IPDOModel.PrecipitacaoMdl">
+        <MappingFragment StoreEntitySet="Precipitacao">
+          <ScalarProperty Name="Fonte" ColumnName="Fonte" />
+          <ScalarProperty Name="Precipitacao1" ColumnName="Precipitacao" />
+          <ScalarProperty Name="SubBacia" ColumnName="SubBacia" />
+          <ScalarProperty Name="Bacia" ColumnName="Bacia" />
+          <ScalarProperty Name="DataAtualizacao" ColumnName="DataAtualizacao" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vazoes_Observadas">
+      <EntityTypeMapping TypeName="IPDOModel.Vazoes_Observadas">
+        <MappingFragment StoreEntitySet="Vazoes_Observadas">
+          <ScalarProperty Name="Data_Update" ColumnName="Data_Update" />
+          <ScalarProperty Name="Vazao" ColumnName="Vazao" />
+          <ScalarProperty Name="Tipo_Vazao" ColumnName="Tipo_Vazao" />
+          <ScalarProperty Name="Bacia" ColumnName="Bacia" />
+          <ScalarProperty Name="Nome_Posto" ColumnName="Nome_Posto" />
+          <ScalarProperty Name="Cod_Posto" ColumnName="Cod_Posto" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

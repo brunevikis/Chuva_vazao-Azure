@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="IPDOModelStoreContainer" CdmEntityContainer="AcomphEntities">
+    <EntitySetMapping Name="ACOMPH">
+      <EntityTypeMapping TypeName="IPDOModel.ACOMPH">
+        <MappingFragment StoreEntitySet="ACOMPH">
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="Posto" ColumnName="Posto" />
+          <ScalarProperty Name="Vaz_nat" ColumnName="Vaz_nat" />
+          <ScalarProperty Name="Vaz_Inc" ColumnName="Vaz_Inc" />
+          <ScalarProperty Name="Reserv" ColumnName="Reserv" />
+          <ScalarProperty Name="Data_Update" ColumnName="Data_Update" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

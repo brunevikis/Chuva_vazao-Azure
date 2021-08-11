@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="IPDOModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Precipitacao">
+          <Key>
+            <PropertyRef Name="Data" />
+            <PropertyRef Name="Bacia" />
+            <PropertyRef Name="SubBacia" />
+            <PropertyRef Name="Fonte" />
+          </Key>
+          <Property Name="Data" Type="datetime" Nullable="false" />
+          <Property Name="DataAtualizacao" Type="datetime" />
+          <Property Name="Bacia" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="SubBacia" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Precipitacao" Type="float" Nullable="false" />
+          <Property Name="Fonte" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Vazoes_Observadas">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Data" Type="datetime" Nullable="false" />
+          <Property Name="Cod_Posto" Type="int" Nullable="false" />
+          <Property Name="Nome_Posto" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Bacia" Type="nvarchar" MaxLength="255" />
+          <Property Name="Tipo_Vazao" Type="nvarchar" MaxLength="50" />
+          <Property Name="Vazao" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Data_Update" Type="datetime" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'IPDO.dbo.CONSULTA_VAZAO' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="CONSULTA_VAZAO">
+          <Key>
+            <PropertyRef Name="data" />
+            <PropertyRef Name="posto" />
+            
+            
+            
+          </Key>
+          <Property Name="data" Type="datetime" Nullable="false" />
+          <Property Name="posto" Type="int" Nullable="false" />
+          <Property Name="qnat" Type="int" Nullable="false" />
+          <Property Name="qinc" Type="int" Nullable="false" />
+          <Property Name="fonte" Type="varchar" MaxLength="6" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'IPDO.dbo.CONSULTA_VAZAO_RDH' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="CONSULTA_VAZAO_RDH">
+          <Key>
+            <PropertyRef Name="data" />
+            <PropertyRef Name="posto" />
+            
+          </Key>
+          <Property Name="data" Type="datetime" Nullable="false" />
+          <Property Name="posto" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="qnat" Type="int" />
+          <Property Name="qinc" Type="float" />
+          <Property Name="fonte" Type="varchar" MaxLength="3" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="IPDOModelStoreContainer">
+          <EntitySet Name="Precipitacao" EntityType="Self.Precipitacao" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Vazoes_Observadas" EntityType="Self.Vazoes_Observadas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CONSULTA_VAZAO" EntityType="Self.CONSULTA_VAZAO" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[CONSULTA_VAZAO].[data] AS [data], 
+[CONSULTA_VAZAO].[posto] AS [posto], 
+[CONSULTA_VAZAO].[qnat] AS [qnat], 
+[CONSULTA_VAZAO].[qinc] AS [qinc], 
+[CONSULTA_VAZAO].[fonte] AS [fonte]
+FROM [dbo].[CONSULTA_VAZAO] AS [CONSULTA_VAZAO]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="CONSULTA_VAZAO_RDH" EntityType="Self.CONSULTA_VAZAO_RDH" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[CONSULTA_VAZAO_RDH].[data] AS [data], 
+[CONSULTA_VAZAO_RDH].[posto] AS [posto], 
+[CONSULTA_VAZAO_RDH].[qnat] AS [qnat], 
+[CONSULTA_VAZAO_RDH].[qinc] AS [qinc], 
+[CONSULTA_VAZAO_RDH].[fonte] AS [fonte]
+FROM [dbo].[CONSULTA_VAZAO_RDH] AS [CONSULTA_VAZAO_RDH]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="IPDOModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="IPDOEntities1" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="CONSULTA_VAZAO_RDH" EntityType="IPDOModel.CONSULTA_VAZAO_RDH" />
+          <EntitySet Name="CONSULTA_VAZAO" EntityType="IPDOModel.CONSULTA_VAZAO" />
+          <EntitySet Name="Precipitacoes" EntityType="IPDOModel.PrecipitacaoMdl" />
+          <EntitySet Name="Vazoes_Observadas" EntityType="IPDOModel.Vazoes_Observadas" />
+        </EntityContainer>
+        <EntityType Name="CONSULTA_VAZAO_RDH">
+          <Key>
+            <PropertyRef Name="posto" />
+            <PropertyRef Name="data" />
+          </Key>
+          <Property Name="data" Type="DateTime" Precision="3" Nullable="false" />
+          <Property Name="posto" Type="Int32" Nullable="false" />
+          <Property Name="qnat" Type="Int32" />
+          <Property Name="qinc" Type="Int32" />
+          <Property Name="fonte" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="CONSULTA_VAZAO">
+          <Key>
+            <PropertyRef Name="data" />
+            <PropertyRef Name="posto" />
+          </Key>
+          <Property Name="data" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="posto" Type="Int32" Nullable="false" />
+          <Property Name="qnat" Type="Int32" Nullable="false" />
+          <Property Name="qinc" Type="Int32" Nullable="false" />
+          <Property Name="fonte" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PrecipitacaoMdl">
+          <Key>
+            <PropertyRef Name="Data" />
+            <PropertyRef Name="Bacia" />
+            <PropertyRef Name="SubBacia" />
+            <PropertyRef Name="Fonte" />
+          </Key>
+          <Property Name="Data" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="DataAtualizacao" Type="DateTime" Precision="3" />
+          <Property Name="Bacia" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SubBacia" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Precipitacao1" Type="Double" Nullable="false" />
+          <Property Name="Fonte" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Vazoes_Observadas">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Data" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Cod_Posto" Type="Int32" Nullable="false" />
+          <Property Name="Nome_Posto" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Bacia" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Tipo_Vazao" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Vazao" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Data_Update" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="IPDOModelStoreContainer" CdmEntityContainer="IPDOEntities1">
+          <EntitySetMapping Name="CONSULTA_VAZAO">
+            <EntityTypeMapping TypeName="IPDOModel.CONSULTA_VAZAO">
+              <MappingFragment StoreEntitySet="CONSULTA_VAZAO">
+                <ScalarProperty Name="fonte" ColumnName="fonte" />
+                <ScalarProperty Name="qinc" ColumnName="qinc" />
+                <ScalarProperty Name="qnat" ColumnName="qnat" />
+                <ScalarProperty Name="posto" ColumnName="posto" />
+                <ScalarProperty Name="data" ColumnName="data" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CONSULTA_VAZAO_RDH">
+            <EntityTypeMapping TypeName="IsTypeOf(IPDOModel.CONSULTA_VAZAO_RDH)">
+              <MappingFragment StoreEntitySet="CONSULTA_VAZAO_RDH">
+                <ScalarProperty Name="fonte" ColumnName="fonte" />
+                <ScalarProperty Name="qinc" ColumnName="qinc" />
+                <ScalarProperty Name="qnat" ColumnName="qnat" />
+                <ScalarProperty Name="posto" ColumnName="posto" />
+                <ScalarProperty Name="data" ColumnName="data" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Precipitacoes">
+            <EntityTypeMapping TypeName="IPDOModel.PrecipitacaoMdl">
+              <MappingFragment StoreEntitySet="Precipitacao">
+                <ScalarProperty Name="Fonte" ColumnName="Fonte" />
+                <ScalarProperty Name="Precipitacao1" ColumnName="Precipitacao" />
+                <ScalarProperty Name="SubBacia" ColumnName="SubBacia" />
+                <ScalarProperty Name="Bacia" ColumnName="Bacia" />
+                <ScalarProperty Name="DataAtualizacao" ColumnName="DataAtualizacao" />
+                <ScalarProperty Name="Data" ColumnName="Data" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vazoes_Observadas">
+            <EntityTypeMapping TypeName="IPDOModel.Vazoes_Observadas">
+              <MappingFragment StoreEntitySet="Vazoes_Observadas">
+                <ScalarProperty Name="Data_Update" ColumnName="Data_Update" />
+                <ScalarProperty Name="Vazao" ColumnName="Vazao" />
+                <ScalarProperty Name="Tipo_Vazao" ColumnName="Tipo_Vazao" />
+                <ScalarProperty Name="Bacia" ColumnName="Bacia" />
+                <ScalarProperty Name="Nome_Posto" ColumnName="Nome_Posto" />
+                <ScalarProperty Name="Cod_Posto" ColumnName="Cod_Posto" />
+                <ScalarProperty Name="Data" ColumnName="Data" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

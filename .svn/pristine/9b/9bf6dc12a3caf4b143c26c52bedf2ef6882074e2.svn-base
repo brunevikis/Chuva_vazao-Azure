@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ESTUDO_PVModelStoreContainer" CdmEntityContainer="ESTUDO_PVEntities">
+    <EntitySetMapping Name="Postos">
+      <EntityTypeMapping TypeName="ESTUDO_PVModel.Postos">
+        <MappingFragment StoreEntitySet="Postos">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="dt_entrada" ColumnName="dt_entrada" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="bacia" ColumnName="bacia" />
+          <ScalarProperty Name="submercado" ColumnName="submercado" />
+          <ScalarProperty Name="produtibilidade" ColumnName="produtibilidade" />
+          <ScalarProperty Name="observacao" ColumnName="observacao" />
+          <ScalarProperty Name="chuvaVazao" ColumnName="chuvaVazao" />
+          <ScalarProperty Name="previvaz" ColumnName="previvaz" />
+          <ScalarProperty Name="calculado" ColumnName="calculado" />
+          <ScalarProperty Name="especial" ColumnName="especial" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
