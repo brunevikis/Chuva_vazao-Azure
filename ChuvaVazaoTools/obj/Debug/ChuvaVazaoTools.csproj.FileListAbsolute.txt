@@ -202,7 +202,6 @@ C:\Development\chuva_vazao - Azure\ChuvaVazaoTools\bin\Debug\EntityFramework.xml
 C:\Development\chuva_vazao - Azure\ChuvaVazaoTools\bin\Debug\EntityFramework.SqlServer.xml
 C:\Development\chuva_vazao - Azure\ChuvaVazaoTools\bin\Debug\Ookii.Dialogs.xml
 C:\Development\chuva_vazao - Azure\ChuvaVazaoTools\bin\Debug\itextsharp.xml
-C:\Development\chuva_vazao - Azure\ChuvaVazaoTools\obj\Debug\ChuvaVazaoTools.csprojAssemblyReference.cache
 C:\Development\chuva_vazao - Azure\ChuvaVazaoTools\obj\Debug\ChuvaVazaoTools.ChuvaViewer.resources
 C:\Development\chuva_vazao - Azure\ChuvaVazaoTools\obj\Debug\ChuvaVazaoTools.DownloadForm.resources
 C:\Development\chuva_vazao - Azure\ChuvaVazaoTools\obj\Debug\ChuvaVazaoTools.FrmMain.resources
@@ -394,3 +393,4 @@ C:\Compass\MIGRACAO\chuva_vazao - Azure\chuva_vazao - Azure\ChuvaVazaoTools\obj\
 C:\Compass\MIGRACAO\chuva_vazao - Azure\chuva_vazao - Azure\ChuvaVazaoTools\obj\Debug\ChuvaVazaoTools.exe.manifest
 C:\Compass\MIGRACAO\chuva_vazao - Azure\chuva_vazao - Azure\ChuvaVazaoTools\obj\Debug\ChuvaVazaoTools.application
 C:\Compass\MIGRACAO\chuva_vazao - Azure\chuva_vazao - Azure\ChuvaVazaoTools\obj\Debug\ChuvaVazaoTools.csproj.CopyComplete
+C:\Development\chuva_vazao - Azure\ChuvaVazaoTools\obj\Debug\ChuvaVazaoTools.csproj.AssemblyReference.cache

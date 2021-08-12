@@ -30,7 +30,6 @@ C:\Development\Chuva_vazao\trunk\Grads\obj\Debug\Grads.pdb
 C:\Development\Chuva_vazao\trunk\Grads\obj\Debug\Grads.csprojAssemblyReference.cache
 C:\Development\chuva_vazao - Azure\Grads\bin\Debug\Grads.dll
 C:\Development\chuva_vazao - Azure\Grads\bin\Debug\Grads.pdb
-C:\Development\chuva_vazao - Azure\Grads\obj\Debug\Grads.csprojAssemblyReference.cache
 C:\Development\chuva_vazao - Azure\Grads\obj\Debug\Grads.csproj.CoreCompileInputs.cache
 C:\Development\chuva_vazao - Azure\Grads\obj\Debug\Grads.dll
 C:\Development\chuva_vazao - Azure\Grads\obj\Debug\Grads.pdb
@@ -52,3 +51,4 @@ C:\Compass\MIGRACAO\chuva_vazao - Azure\chuva_vazao - Azure\Grads\obj\Debug\Grad
 C:\Compass\MIGRACAO\chuva_vazao - Azure\chuva_vazao - Azure\Grads\obj\Debug\Grads.csproj.CoreCompileInputs.cache
 C:\Compass\MIGRACAO\chuva_vazao - Azure\chuva_vazao - Azure\Grads\obj\Debug\Grads.dll
 C:\Compass\MIGRACAO\chuva_vazao - Azure\chuva_vazao - Azure\Grads\obj\Debug\Grads.pdb
+C:\Development\chuva_vazao - Azure\Grads\obj\Debug\Grads.csproj.AssemblyReference.cache

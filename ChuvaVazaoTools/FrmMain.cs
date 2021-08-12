@@ -3844,7 +3844,7 @@ namespace ChuvaVazaoTools
         }
 
 
-        public void Run_Manual()
+        public void Run_Manual(bool rodarPrevivaz = true)
         {
             var logF = textLogger;
             var searchPath = "";
@@ -4048,7 +4048,7 @@ namespace ChuvaVazaoTools
                                     logF.WriteLine("PROCESSANDO RESULTADOS");
                                     try
                                     {
-                                        ProcessarResultadosManual(pastaSaida, logF, revnum, statusF);
+                                        ProcessarResultadosManual(pastaSaida, logF, revnum, statusF, rodarPrevivaz);
 
                                     }
                                     catch
@@ -7751,7 +7751,7 @@ namespace ChuvaVazaoTools
 
 
         }
-        private void ProcessarResultadosManual(string pastaSaida, System.IO.TextWriter logF = null, int? revnum = null, RunStatus statusF = null)
+        private void ProcessarResultadosManual(string pastaSaida, System.IO.TextWriter logF = null, int? revnum = null, RunStatus statusF = null, bool rodarPrevivaz = true)
         {
             Excel.Workbook wbCen = null;
             Excel.Workbook wb = null;
@@ -7863,33 +7863,37 @@ namespace ChuvaVazaoTools
                     }
 
 
-
-                    var p = Program.GetPrevivazExPath(pathCen);
-
-
-                    if (p != null)
+                   
+                    if (rodarPrevivaz)
                     {
-                        if (logF != null) logF.WriteLine("EXECUCAO PREVIVAZ");
-                        if (encad)
-                        {
-                            var teste = p.Item2 + "|true";
-                            var pre = System.Diagnostics.Process.Start(p.Item1, p.Item2 + "|true");
+                        var p = Program.GetPrevivazExPath(pathCen);
 
-                            pre.WaitForExit();
+
+                        if (p != null)
+                        {
+                            if (logF != null) logF.WriteLine("EXECUCAO PREVIVAZ");
+                            if (encad)
+                            {
+                                var teste = p.Item2 + "|true";
+                                var pre = System.Diagnostics.Process.Start(p.Item1, p.Item2 + "|true");
+
+                                pre.WaitForExit();
+                            }
+                            else
+                            {
+
+                                var pr = System.Diagnostics.Process.Start(p.Item1, p.Item2);
+
+                                pr.WaitForExit();
+                            }
                         }
                         else
                         {
-
-                            var pr = System.Diagnostics.Process.Start(p.Item1, p.Item2);
-
-                            pr.WaitForExit();
+                            if (statusF != null) statusF.Previvaz = RunStatus.statuscode.error;
+                            return;
                         }
                     }
-                    else
-                    {
-                        if (statusF != null) statusF.Previvaz = RunStatus.statuscode.error;
-                        return;
-                    }
+                    
                     if (statusF != null) statusF.Previvaz = RunStatus.statuscode.completed;
                 }
 
@@ -9003,6 +9007,12 @@ namespace ChuvaVazaoTools
         private void listLogs_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_PorPastaSemPrevivaz_Click(object sender, EventArgs e)
+        {
+            bool rodarPrevivaz = false;
+            Run_Manual(rodarPrevivaz);
         }
     }
 

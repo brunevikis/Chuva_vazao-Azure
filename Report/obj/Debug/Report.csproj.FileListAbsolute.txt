@@ -77,7 +77,6 @@ C:\Development\chuva_vazao - Azure\Report\bin\Debug\Tools.dll
 C:\Development\chuva_vazao - Azure\Report\bin\Debug\Grads.pdb
 C:\Development\chuva_vazao - Azure\Report\bin\Debug\Tools.pdb
 C:\Development\chuva_vazao - Azure\Report\bin\Debug\itextsharp.xml
-C:\Development\chuva_vazao - Azure\Report\obj\Debug\Report.csprojAssemblyReference.cache
 C:\Development\chuva_vazao - Azure\Report\obj\Debug\Report.csproj.CoreCompileInputs.cache
 C:\Development\chuva_vazao - Azure\Report\obj\Debug\Report.csproj.CopyComplete
 C:\Development\chuva_vazao - Azure\Report\obj\Debug\Report.dll
@@ -124,3 +123,4 @@ C:\Compass\MIGRACAO\chuva_vazao - Azure\chuva_vazao - Azure\Report\obj\Debug\Rep
 C:\Compass\MIGRACAO\chuva_vazao - Azure\chuva_vazao - Azure\Report\obj\Debug\Report.csproj.CopyComplete
 C:\Compass\MIGRACAO\chuva_vazao - Azure\chuva_vazao - Azure\Report\obj\Debug\Report.dll
 C:\Compass\MIGRACAO\chuva_vazao - Azure\chuva_vazao - Azure\Report\obj\Debug\Report.pdb
+C:\Development\chuva_vazao - Azure\Report\obj\Debug\Report.csproj.AssemblyReference.cache

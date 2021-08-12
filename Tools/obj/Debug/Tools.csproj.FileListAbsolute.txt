@@ -33,7 +33,6 @@ C:\Development\chuva_vazao - Azure\Tools\bin\Debug\Tools.pdb
 C:\Development\chuva_vazao - Azure\Tools\obj\Debug\Tools.csproj.CoreCompileInputs.cache
 C:\Development\chuva_vazao - Azure\Tools\obj\Debug\Tools.dll
 C:\Development\chuva_vazao - Azure\Tools\obj\Debug\Tools.pdb
-C:\Development\chuva_vazao - Azure\Tools\obj\Debug\Tools.csprojAssemblyReference.cache
 C:\Development\Chuva_Vazao_Azure\Tools\bin\Debug\Tools.dll
 C:\Development\Chuva_Vazao_Azure\Tools\bin\Debug\Tools.pdb
 C:\Development\Chuva_Vazao_Azure\Tools\obj\Debug\Tools.csprojAssemblyReference.cache
@@ -51,3 +50,4 @@ C:\Compass\MIGRACAO\chuva_vazao - Azure\chuva_vazao - Azure\Tools\obj\Debug\Tool
 C:\Compass\MIGRACAO\chuva_vazao - Azure\chuva_vazao - Azure\Tools\obj\Debug\Tools.csproj.CoreCompileInputs.cache
 C:\Compass\MIGRACAO\chuva_vazao - Azure\chuva_vazao - Azure\Tools\obj\Debug\Tools.dll
 C:\Compass\MIGRACAO\chuva_vazao - Azure\chuva_vazao - Azure\Tools\obj\Debug\Tools.pdb
+C:\Development\chuva_vazao - Azure\Tools\obj\Debug\Tools.csproj.AssemblyReference.cache
