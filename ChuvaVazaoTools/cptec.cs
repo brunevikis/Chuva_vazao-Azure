@@ -1110,12 +1110,24 @@ namespace ChuvaVazaoTools
             var filesToDownload = new Dictionary<int, string>();
             try
             {
-                if (log != null) log.WriteLine(url);
-                for (int i = 0; i < 9; i++)
+                if (horaI == 12)
                 {
-                    filesToDownload.Add(i, "model_modez_" + dt.ToString("yyyyMMdd") + hora + "_" + (i * 24 + 36 - horaI).ToString() + "_1444_63.png");
+                    if (log != null) log.WriteLine(url);
+                    for (int i = 0; i < 9; i++)
+                    {
+                        filesToDownload.Add(i, "model_modez_" + dt.ToString("yyyyMMdd") + hora + "_" + (i * 24 + 36 - horaI).ToString() + "_1444_63.png");
+                    }
+                    filesToDownload.Add(9, "model_modez_" + dt.ToString("yyyyMMdd") + hora + "_" + (240).ToString() + "_1444_63.png");
                 }
-                filesToDownload.Add(9, "model_modez_" + dt.ToString("yyyyMMdd") + hora + "_" + (240).ToString() + "_1444_63.png");
+                else
+                {
+                    if (log != null) log.WriteLine(url);
+                    for (int i = 0; i < 9; i++)
+                    {
+                        filesToDownload.Add(i, "model_modez_" + dt.ToString("yyyyMMdd") + hora + "_" + (i * 24 + 36 - horaI).ToString() + "_1444_63.png");
+                    }
+                    //filesToDownload.Add(9, "model_modez_" + dt.ToString("yyyyMMdd") + hora + "_" + (240).ToString() + "_1444_63.png");
+                }
 
             }
             catch
