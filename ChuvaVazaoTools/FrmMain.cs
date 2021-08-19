@@ -712,7 +712,7 @@ namespace ChuvaVazaoTools
                 return;
             }
 
-            this.ArquivosDeEntradaModelo = System.IO.Path.Combine(pastaBase, "Modelos_Chuva_Vazao");
+            this.ArquivosDeEntradaModelo = System.IO.Path.Combine(pastaBase, "Modelos_Chuva_Vazao_Shadow");//trocar na quinta dia 26-08 Modelos_Chuva_Vazao
             this.ArquivosDeEntradaPrevivaz = System.IO.Path.Combine(pastaBase, "Previvaz", "Arq_Entrada");
             this.ArquivoPrevsBase = System.IO.Directory.GetFiles(pastaBase, "prevs.*", SearchOption.AllDirectories)[0];
             this.DataSemanaPrevsBase = currRev.revDate;
@@ -3360,7 +3360,7 @@ namespace ChuvaVazaoTools
                 return;
             }
 
-            this.ArquivosDeEntradaModelo = System.IO.Path.Combine(pastaBase, "Modelos_Chuva_Vazao");
+            this.ArquivosDeEntradaModelo = System.IO.Path.Combine(pastaBase, "Modelos_Chuva_Vazao_Shadow");
             this.ArquivosDeEntradaPrevivaz = System.IO.Path.Combine(pastaBase, "Previvaz", "Arq_Entrada");
             this.ArquivoPrevsBase = System.IO.Directory.GetFiles(pastaBase, "prevs.*", SearchOption.AllDirectories)[0];
             this.DataSemanaPrevsBase = currRev.revDate;
@@ -3736,7 +3736,7 @@ namespace ChuvaVazaoTools
                 return;
             }
 
-            this.ArquivosDeEntradaModelo = System.IO.Path.Combine(pastaBase, "Modelos_Chuva_Vazao");
+            this.ArquivosDeEntradaModelo = System.IO.Path.Combine(pastaBase, "Modelos_Chuva_Vazao_Shadow");
             this.ArquivosDeEntradaPrevivaz = System.IO.Path.Combine(pastaBase, "Previvaz", "Arq_Entrada");
             this.ArquivoPrevsBase = System.IO.Directory.GetFiles(pastaBase, "prevs.*", SearchOption.AllDirectories)[0];
             this.DataSemanaPrevsBase = currRev.revDate;
@@ -5118,7 +5118,7 @@ namespace ChuvaVazaoTools
             {
                 ofd.SelectedPath = System.IO.Path.Combine(Config.CaminhoInicialEntrada, currRev.revDate.ToString("MM_yyyy"));
 
-                this.ArquivosDeEntradaModelo = System.IO.Path.Combine(pastaBase, "Modelos_Chuva_Vazao");
+                this.ArquivosDeEntradaModelo = System.IO.Path.Combine(pastaBase, "Modelos_Chuva_Vazao_Shadow");
                 this.ArquivosDeEntradaPrevivaz = System.IO.Path.Combine(pastaBase, "Previvaz", "Arq_Entrada");
                 this.ArquivoPrevsBase = System.IO.Directory.GetFiles(pastaBase, "prevs.*", SearchOption.AllDirectories)[0];
             }
