@@ -1190,11 +1190,11 @@ namespace ChuvaVazaoTools
             cptec.CopyBin(dest, directoryToSaveBin);
 
 
-            var oneDrive_equip = Path.Combine(@"B:\Compass\MinhaTI\Preço - Documentos\Acompanhamento_de_Precipitacao");
+            var oneDrive_equip = Path.Combine(@"B:\Enercore\Energy Core Trading\Energy Core Pricing - Documents\Acompanhamento_de_Precipitacao");
 
             if (!Directory.Exists(oneDrive_equip))
             {
-                oneDrive_equip = oneDrive_equip.Replace("Documentos", "Documents");
+                oneDrive_equip = oneDrive_equip.Replace("Documents", "Documentos");
             }
 
             var oneDrive_Gif = Path.Combine(oneDrive_equip, "Mapas", dt.ToString("yyyy"), dt.ToString("MM"), dt.ToString("dd"), modelo + hora);
@@ -1299,16 +1299,16 @@ namespace ChuvaVazaoTools
                         CopyGifs(dest, directoryToSaveGif);
                         CopyBin(dest, directoryToSaveBin);
                         //
-                        var oneDrive = @"B:\Compass\OneDrive - MinhaTI\Compass\Trading";
+                        var oneDrive = @"B:\Enercore\Energy Core Trading\Energy Core Pricing - Documents\Trading";
 
-                        string direDrivePath = "C:\\Compass\\MinhaTI\\Alex Freires Marques - Compass\\Trading\\Acompanhamento Metereologico Semanal\\spiderman\\" + dt.ToString("yyyy_MM_dd") + @"\ETA" + s;
+                        string direDrivePath = @"B:\Enercore\Energy Core Trading\Energy Core Pricing - Documents\Trading\Acompanhamento Metereologico Semanal\spiderman\" + dt.ToString("yyyy_MM_dd") + @"\ETA" + s;
 
-                        var oneDrive_equip = Path.Combine(@"B:\Compass\MinhaTI\Preço - Documentos\Acompanhamento_de_Precipitacao");
+                        var oneDrive_equip = Path.Combine(@"B:\Enercore\Energy Core Trading\Energy Core Pricing - Documents\Acompanhamento_de_Precipitacao");
                         var oneDrive_Gif = Path.Combine(oneDrive_equip, "Mapas", dt.ToString("yyyy"), dt.ToString("MM"), dt.ToString("dd"), "ETA" + s);
 
                         if (Directory.Exists(oneDrive))
                         {
-                            direDrivePath = "C:\\Compass\\OneDrive - MinhaTI\\Compass\\Trading\\Acompanhamento Metereologico Semanal\\spiderman\\" + dt.ToString("yyyy_MM_dd") + @"\ETA" + s;
+                            direDrivePath = @"B:\Enercore\Energy Core Trading\Energy Core Pricing - Documents\Trading\Acompanhamento Metereologico Semanal\spiderman\" + dt.ToString("yyyy_MM_dd") + @"\ETA" + s;
                         }
                         if (!Directory.Exists(direDrivePath))
                         {
@@ -1426,10 +1426,10 @@ namespace ChuvaVazaoTools
 
                     CopyGifs(dest, directoryToSaveGif);
 
-                    var oneDrive_equip = Path.Combine(@"B:\Compass\MinhaTI\Preço - Documentos\Acompanhamento_de_Precipitacao");
+                    var oneDrive_equip = Path.Combine(@"B:\Enercore\Energy Core Trading\Energy Core Pricing - Documents\Acompanhamento_de_Precipitacao");
                     if (!System.IO.Directory.Exists(oneDrive_equip))
                     {
-                        oneDrive_equip = oneDrive_equip.Replace("Documentos", "Documents");
+                        oneDrive_equip = oneDrive_equip.Replace("Documents", "Documentos");
                     }
                     var oneDrive_Gif = Path.Combine(oneDrive_equip, "Mapas", dt.ToString("yyyy"), dt.ToString("MM"), dt.ToString("dd"), "ECMWF_ONS");
 
@@ -1529,11 +1529,11 @@ namespace ChuvaVazaoTools
 
                     CopyGifs(dest, directoryToSaveGif);
 
-                    var oneDrive_equip = Path.Combine(@"B:\Compass\MinhaTI\Preço - Documentos\Acompanhamento_de_Precipitacao");
+                    var oneDrive_equip = Path.Combine(@"B:\Enercore\Energy Core Trading\Energy Core Pricing - Documents\Acompanhamento_de_Precipitacao");
 
                     if (!Directory.Exists(oneDrive_equip))
                     {
-                        oneDrive_equip = oneDrive_equip.Replace("Documentos", "Documents");
+                        oneDrive_equip = oneDrive_equip.Replace("Documents", "Documentos");
                     }
 
                     var oneDrive_Gif = Path.Combine(oneDrive_equip, "Mapas", dt.ToString("yyyy"), dt.ToString("MM"), dt.ToString("dd"), "ETA" + s);

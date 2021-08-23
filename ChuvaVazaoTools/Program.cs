@@ -281,11 +281,11 @@ namespace ChuvaVazaoTools
                     else
                         logF.WriteLine("FUNCEME OK");
 
-                    var oneDrive_equip = Path.Combine(@"B:\Compass\MinhaTI\Preço - Documentos\Acompanhamento_de_Precipitacao");
+                    var oneDrive_equip = Path.Combine(@"B:\Enercore\Energy Core Trading\Energy Core Pricing - Documents\Acompanhamento_de_Precipitacao");
 
                     if (!Directory.Exists(oneDrive_equip))
                     {
-                        oneDrive_equip = oneDrive_equip.Replace("Documentos", "Documents");
+                        oneDrive_equip = oneDrive_equip.Replace("Documents", "Documentos");
                     }
 
                     var oneDrive_Gif = Path.Combine(oneDrive_equip, "Mapas", date.ToString("yyyy"), date.ToString("MM"), date.ToString("dd"), "OBSERVADO");

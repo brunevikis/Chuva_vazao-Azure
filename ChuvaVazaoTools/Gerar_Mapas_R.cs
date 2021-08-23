@@ -22,17 +22,17 @@ namespace ChuvaVazaoTools
 
             var oneDrivePath_ori = Environment.GetEnvironmentVariable("OneDriveCommercial");
             //B:\Compass\MinhaTI\Alex Freires Marques - Compass\Trading
-            var oneDrive = Path.Combine(oneDrivePath_ori, @"Compass\Pedro\NOAA\");
-            if (!Directory.Exists(oneDrive))
-            {
-                oneDrive = Path.Combine(oneDrivePath_ori.Replace(oneDrivePath_ori.Split('\\').Last(), @"MinhaTI\Alex Freires Marques - Compass\Pedro\NOAA\"));
-            }
+            //var oneDrive = Path.Combine(oneDrivePath_ori, @"Compass\Pedro\NOAA\");
+            //if (!Directory.Exists(oneDrive))
+            //{
+            //    oneDrive = Path.Combine(oneDrivePath_ori.Replace(oneDrivePath_ori.Split('\\').Last(), @"MinhaTI\Alex Freires Marques - Compass\Pedro\NOAA\"));
+            //}
 
-            var oneDrive_preco = Path.Combine(oneDrivePath_ori.Replace(oneDrivePath_ori.Split('\\').Last(), @"MinhaTI\Preço - Documentos\Acompanhamento_de_Precipitacao\Previsao\"));
-
+            var oneDrive_preco = Path.Combine(oneDrivePath_ori,@"Energy Core Pricing - Documents\Acompanhamento_de_Precipitacao\Previsao\");
+            //B:\Enercore\Energy Core Trading\Energy Core Pricing - Documents\Acompanhamento_de_Precipitacao
             if (!Directory.Exists(oneDrive_preco))
             {
-                oneDrive_preco = oneDrive_preco.Replace("Preço - Documentos", "Preço - Documents");
+                oneDrive_preco = oneDrive_preco.Replace("Energy Core Pricing - Documents", "Energy Core Pricing - Documentos");
             }
             // Date of VE
             int dias_ve = -1;
@@ -692,10 +692,10 @@ namespace ChuvaVazaoTools
             var dt = DateTime.Today.AddDays(-1);
             var oneDrivePath_ori = Environment.GetEnvironmentVariable("OneDriveCommercial");
             //B:\Compass\MinhaTI\Alex Freires Marques - Compass\Trading
-            var oneDrive = Path.Combine(oneDrivePath_ori.Replace(oneDrivePath_ori.Split('\\').Last(), @"MinhaTI\Preço - Documentos\Acompanhamento_de_Precipitacao\Previsao\"));
+            var oneDrive = Path.Combine(oneDrivePath_ori, @"Energy Core Pricing - Documents\Acompanhamento_de_Precipitacao\Previsao\");
             if (!Directory.Exists(oneDrive))
             {
-                oneDrive = oneDrive.Replace("Preço - Documentos", "Preço - Documents");
+                oneDrive = oneDrive.Replace("Energy Core Pricing - Documents", "Energy Core Pricing - Documentos");
             }
 
             var oneDrive_gefs = Path.Combine(oneDrive, dt.ToString("yyyy"), dt.ToString("MM"), dt.ToString("dd"), "GEFS_0.5_00");
@@ -801,10 +801,10 @@ namespace ChuvaVazaoTools
             var data_final = DateTime.Today;
             var oneDrivePath_ori = Environment.GetEnvironmentVariable("OneDriveCommercial");
             //B:\Compass\MinhaTI\Alex Freires Marques - Compass\Trading
-            var oneDrive = Path.Combine(oneDrivePath_ori.Replace(oneDrivePath_ori.Split('\\').Last(), @"MinhaTI\Preço - Documentos\Acompanhamento_de_Precipitacao\Previsao\"));
+            var oneDrive = Path.Combine(oneDrivePath_ori, @"Energy Core Pricing - Documents\Acompanhamento_de_Precipitacao\Previsao\");
             if (!Directory.Exists(oneDrive))
             {
-                oneDrive = oneDrive.Replace("Preço - Documentos", "Preço - Documents");
+                oneDrive = oneDrive.Replace("Energy Core Pricing - Documents", "Energy Core Pricing - Documentos");
             }
             var oneDrive_ecmwf = Path.Combine(oneDrive, dt.ToString("yyyy"), dt.ToString("MM"), dt.ToString("dd"), "ECMWF45");
             while (!Directory.Exists(oneDrive_ecmwf))

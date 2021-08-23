@@ -8822,7 +8822,7 @@ namespace ChuvaVazaoTools
             if (Relatorio == true)
             {
                 var data = DateTime.Today;
-                var oneDrive_equip = Path.Combine(@"B:\Compass\MinhaTI\Preço - Documents\Acompanhamento_de_Precipitacao");
+                var oneDrive_equip = Path.Combine(@"B:\Enercore\Energy Core Trading\Energy Core Pricing - Documents\Acompanhamento_de_Precipitacao");
                 var oneDrive_Gif = Path.Combine(oneDrive_equip, "Mapas", data.ToString("yyyy"), data.ToString("MM"), data.ToString("dd"), "CONJUNTO00PREV");
 
                 var path_relatorio = Path.Combine(@"C:\Files\Trading\Acompanhamento Metereologico Semanal\spiderman", data.ToString("yyyy_MM_dd"), @"CONJUNTO00PREV");
