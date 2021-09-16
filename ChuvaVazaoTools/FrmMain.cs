@@ -706,13 +706,13 @@ namespace ChuvaVazaoTools
 
             if (logF != null) logF.WriteLine("INICIANDO RODADA: " + name);
 
-            if (!Directory.Exists(pastaBase) || !(Directory.Exists(System.IO.Path.Combine(pastaBase, "Modelos_Chuva_Vazao")) && Directory.Exists(System.IO.Path.Combine(pastaBase, "Previvaz", "Arq_Entrada")) && System.IO.Directory.GetFiles(pastaBase, "prevs.*", SearchOption.AllDirectories).Length > 0))
+            if (!Directory.Exists(pastaBase) || !(Directory.Exists(System.IO.Path.Combine(pastaBase, "Modelos_Chuva_Vazao_Shadow")) && Directory.Exists(System.IO.Path.Combine(pastaBase, "Previvaz", "Arq_Entrada")) && System.IO.Directory.GetFiles(pastaBase, "prevs.*", SearchOption.AllDirectories).Length > 0))
             {
                 if (logF != null) logF.WriteLine("Arquivos de entrada nao disponiveis");
                 return;
             }
 
-            this.ArquivosDeEntradaModelo = System.IO.Path.Combine(pastaBase, "Modelos_Chuva_Vazao");//trocar na quinta dia 26-08 Modelos_Chuva_Vazao
+            this.ArquivosDeEntradaModelo = System.IO.Path.Combine(pastaBase, "Modelos_Chuva_Vazao_Shadow");//trocar na quinta dia 26-08 Modelos_Chuva_Vazao
             this.ArquivosDeEntradaPrevivaz = System.IO.Path.Combine(pastaBase, "Previvaz", "Arq_Entrada");
             this.ArquivoPrevsBase = System.IO.Directory.GetFiles(pastaBase, "prevs.*", SearchOption.AllDirectories)[0];
             this.DataSemanaPrevsBase = currRev.revDate;
@@ -3354,13 +3354,13 @@ namespace ChuvaVazaoTools
             //var pastaBase = @"C:\Files\Middle - Preço\Acompanhamento de vazões\12_2018\Dados_de_Entrada_e_Saida_201812_RV0";
 
 
-            if (!Directory.Exists(pastaBase) || !(Directory.Exists(System.IO.Path.Combine(pastaBase, "Modelos_Chuva_Vazao")) && Directory.Exists(System.IO.Path.Combine(pastaBase, "Previvaz", "Arq_Entrada")) && System.IO.Directory.GetFiles(pastaBase, "prevs.*", SearchOption.AllDirectories).Length > 0))
+            if (!Directory.Exists(pastaBase) || !(Directory.Exists(System.IO.Path.Combine(pastaBase, "Modelos_Chuva_Vazao_Shadow")) && Directory.Exists(System.IO.Path.Combine(pastaBase, "Previvaz", "Arq_Entrada")) && System.IO.Directory.GetFiles(pastaBase, "prevs.*", SearchOption.AllDirectories).Length > 0))
             {
                 if (logF != null) logF.WriteLine("Arquivos de entrada nao disponiveis");
                 return;
             }
 
-            this.ArquivosDeEntradaModelo = System.IO.Path.Combine(pastaBase, "Modelos_Chuva_Vazao");
+            this.ArquivosDeEntradaModelo = System.IO.Path.Combine(pastaBase, "Modelos_Chuva_Vazao_Shadow");
             this.ArquivosDeEntradaPrevivaz = System.IO.Path.Combine(pastaBase, "Previvaz", "Arq_Entrada");
             this.ArquivoPrevsBase = System.IO.Directory.GetFiles(pastaBase, "prevs.*", SearchOption.AllDirectories)[0];
             this.DataSemanaPrevsBase = currRev.revDate;
@@ -3730,13 +3730,13 @@ namespace ChuvaVazaoTools
             //var pastaBase = @"C:\Files\Middle - Preço\Acompanhamento de vazões\12_2018\Dados_de_Entrada_e_Saida_201812_RV0";
 
 
-            if (!Directory.Exists(pastaBase) || !(Directory.Exists(System.IO.Path.Combine(pastaBase, "Modelos_Chuva_Vazao")) && Directory.Exists(System.IO.Path.Combine(pastaBase, "Previvaz", "Arq_Entrada")) && System.IO.Directory.GetFiles(pastaBase, "prevs.*", SearchOption.AllDirectories).Length > 0))
+            if (!Directory.Exists(pastaBase) || !(Directory.Exists(System.IO.Path.Combine(pastaBase, "Modelos_Chuva_Vazao_Shadow")) && Directory.Exists(System.IO.Path.Combine(pastaBase, "Previvaz", "Arq_Entrada")) && System.IO.Directory.GetFiles(pastaBase, "prevs.*", SearchOption.AllDirectories).Length > 0))
             {
                 if (logF != null) logF.WriteLine("Arquivos de entrada nao disponiveis");
                 return;
             }
 
-            this.ArquivosDeEntradaModelo = System.IO.Path.Combine(pastaBase, "Modelos_Chuva_Vazao");
+            this.ArquivosDeEntradaModelo = System.IO.Path.Combine(pastaBase, "Modelos_Chuva_Vazao_Shadow");
             this.ArquivosDeEntradaPrevivaz = System.IO.Path.Combine(pastaBase, "Previvaz", "Arq_Entrada");
             this.ArquivoPrevsBase = System.IO.Directory.GetFiles(pastaBase, "prevs.*", SearchOption.AllDirectories)[0];
             this.DataSemanaPrevsBase = currRev.revDate;
@@ -4300,7 +4300,7 @@ namespace ChuvaVazaoTools
 
             //else if(File.Exists(Path.Combine(@"\\cgclsfsr03.comgas.local\SoftsPRD1\Compass\Middle - Preço\Acompanhamento de vazões", runRev.revDate.ToString("MM_yyyy"), @"Dados_de_Entrada_e_Saida_"+ runRev.revDate.ToString("yyyyMM")+"_RV"+runRev.rev, "Modelos_Chuva_Vazao_"+ data_Atual.ToString("yyyyMMdd")+".zip")))//"Modelos_Chuva_Vazao_"+ data_Atual.ToString("yyyyMMdd")+".zip"
             // else if(File.Exists(Path.Combine(@"\\cgclsfsr03.comgas.local\SoftsPRD1\Compass\Middle - Preço\Acompanhamento de vazões", runRev.revDate.ToString("MM_yyyy"), @"Dados_de_Entrada_e_Saida_"+ runRev.revDate.ToString("yyyyMM")+"_RV"+runRev.rev, @"Modelos_Chuva_Vazao\CPINS\Arq_Saida", data_Atual.ToString("dd-MM-yyyy")+"_PLANILHA_USB.txt")))
-            else if (File.Exists(Path.Combine(@"C:\Files\Middle - Preço\Acompanhamento de vazões", runRev.revDate.ToString("MM_yyyy"), @"Dados_de_Entrada_e_Saida_" + runRev.revDate.ToString("yyyyMM") + "_RV" + runRev.rev, @"Modelos_Chuva_Vazao\CPINS\Arq_Saida", data_Atual.ToString("dd-MM-yyyy") + "_PLANILHA_USB.txt")))
+            else if (File.Exists(Path.Combine(@"C:\Files\Middle - Preço\Acompanhamento de vazões", runRev.revDate.ToString("MM_yyyy"), @"Dados_de_Entrada_e_Saida_" + runRev.revDate.ToString("yyyyMM") + "_RV" + runRev.rev, @"Modelos_Chuva_Vazao_Shadow\CPINS\Arq_Saida", data_Atual.ToString("dd-MM-yyyy") + "_PLANILHA_USB.txt")))
             {
 
                 if (merge != null)
@@ -5118,7 +5118,7 @@ namespace ChuvaVazaoTools
             {
                 ofd.SelectedPath = System.IO.Path.Combine(Config.CaminhoInicialEntrada, currRev.revDate.ToString("MM_yyyy"));
 
-                this.ArquivosDeEntradaModelo = System.IO.Path.Combine(pastaBase, "Modelos_Chuva_Vazao");
+                this.ArquivosDeEntradaModelo = System.IO.Path.Combine(pastaBase, "Modelos_Chuva_Vazao_Shadow");
                 this.ArquivosDeEntradaPrevivaz = System.IO.Path.Combine(pastaBase, "Previvaz", "Arq_Entrada");
                 this.ArquivoPrevsBase = System.IO.Directory.GetFiles(pastaBase, "prevs.*", SearchOption.AllDirectories)[0];
             }
@@ -5791,7 +5791,7 @@ namespace ChuvaVazaoTools
 
             if (ofd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                this.ArquivosDeEntradaModelo = System.IO.Path.Combine(ofd.SelectedPath, "Modelos_Chuva_Vazao");
+                this.ArquivosDeEntradaModelo = System.IO.Path.Combine(ofd.SelectedPath, "Modelos_Chuva_Vazao_Shadow");
                 this.ArquivosDeEntradaPrevivaz = System.IO.Path.Combine(ofd.SelectedPath, "Previvaz", "Arq_Entrada");
                 this.ArquivoPrevsBase = System.IO.Directory.GetFiles(ofd.SelectedPath, "prevs.*", SearchOption.AllDirectories)[0];
             }
