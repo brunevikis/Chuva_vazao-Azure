@@ -924,8 +924,7 @@ namespace Report
             }
             else
             {
-                if (Directory.Exists(Path.Combine(camNOAA, GefsNOAA12)) && Directory.Exists(Path.Combine(camNOAA, GfsNOAA12)) && Directory.Exists(Path.Combine(caminhoSpider, data.ToString("yyyy_MM_dd"), camGfs12)) &&
-                    Directory.Exists(Path.Combine(caminhoSpider, data.ToString("yyyy_MM_dd"), camGefs12)))
+                if (Directory.Exists(Path.Combine(camNOAA, GefsNOAA12)) && Directory.Exists(Path.Combine(camNOAA, GfsNOAA12)))
                 {
 
 
@@ -935,8 +934,8 @@ namespace Report
 
 
 
-                    var imgsConj = buscaPrev(caminhoSpider, data, camGefs12, 3);
-                    var imgsConj1 = buscaPrev(caminhoSpider, data, camGefs, 3);
+                    var imgsConj = buscaPrevNOAA(caminhoSpider, data, GefsNOAA12, 0, camNOAA, preliminar);
+                    var imgsConj1 = buscaPrevNOAA(caminhoSpider, data, GefsNOAA00, 0, camNOAA, preliminar);
 
 
                     //doc.InserirParte2("Previsão de precipitação pelos modelos Conjunto (ETA 40+GEFS)");
@@ -1136,7 +1135,7 @@ namespace Report
                         doc.InserirImagens(1, imgsConj1 = buscaPrevNOAA(caminhoSpider, data, GfsNOAA00, 0, camAlterNOAA, preliminar));
                         doc.InserirMeioEspaco();
 
-                       // doc.InserirSubtitulo2("Previsão por modelo (GFS) 12z do dia " + data.ToString("dd/MM/yyyy"));
+                        // doc.InserirSubtitulo2("Previsão por modelo (GFS) 12z do dia " + data.ToString("dd/MM/yyyy"));
                         doc.InserirImagens(1, imgsConj = buscaPrevNOAA(caminhoSpider, data, GfsNOAA12, 0, camAlterNOAA, preliminar));
                     }
                     catch { }
@@ -1298,7 +1297,7 @@ namespace Report
                     // doc.InserirSubtitulo2("Previsão por modelo (GFS) 12z do dia " + data.ToString("dd/MM/yyyy"));
                     doc.InserirImagens(1, imgsConj = buscaPrevNOAA(caminhoSpider, data, GfsNOAA12, 0, camNOAA, preliminar));
                 }
-                catch(Exception e) { }
+                catch (Exception e) { }
                 doc.Close();
 
                 return caminho;
@@ -2449,7 +2448,7 @@ namespace Report
 
                     while (!app.Ready) System.Threading.Thread.Sleep(1000);
                 }
-                catch(Exception e)
+                catch (Exception e)
                 {
                     wb.Close(SaveChanges: false);
                     app.Quit();
