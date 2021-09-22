@@ -616,8 +616,8 @@ namespace Report
             var camNOAA = Path.Combine(@"B:\Enercore\Energy Core Trading\Energy Core Pricing - Documents\Acompanhamento_de_Precipitacao\Mapas", data.ToString("yyyy"), data.ToString("MM"), data.ToString("dd"));
             var camNOAAOntem = Path.Combine(@"B:\Enercore\Energy Core Trading\Energy Core Pricing - Documents\Acompanhamento_de_Precipitacao\Mapas", data1.ToString("yyyy"), data1.ToString("MM"), data1.ToString("dd"));
 
-            var camAlterNOAA = Path.Combine(@"B:\Compass\OneDrive - MinhaTI\Compass\Pedro\NOAA", data.ToString("yyyy"), data.ToString("MM"), data.ToString("dd"));
-            var camAlterNOAAOntem = Path.Combine(@"B:\Compass\OneDrive - MinhaTI\Compass\Pedro\NOAA", data1.ToString("yyyy"), data1.ToString("MM"), data1.ToString("dd"));
+            //var camAlterNOAA = Path.Combine(@"B:\Compass\OneDrive - MinhaTI\Compass\Pedro\NOAA", data.ToString("yyyy"), data.ToString("MM"), data.ToString("dd"));
+            // var camAlterNOAAOntem = Path.Combine(@"B:\Compass\OneDrive - MinhaTI\Compass\Pedro\NOAA", data1.ToString("yyyy"), data1.ToString("MM"), data1.ToString("dd"));
 
             string GefsNOAA00 = "GEFS_0.5_00";
             string GfsNOAA00 = "GFS00";
@@ -674,7 +674,7 @@ namespace Report
 
                     }
 
-
+                    #region mapa nao utilizado
                     //doc.InserirParte2("Previsão de precipitação pelo modelo GLOBAL ENSEMBLE (GEFS)");
 
                     //try
@@ -700,6 +700,7 @@ namespace Report
                     //catch { }
 
                     //doc.NovaPagina2();
+                    #endregion
 
                     doc.InserirParte2("Previsão de precipitação pelo modelo EUROPEU (ECMWF Operativo) dos dias " + data1.ToString("dd/MM/yyyy") + " e " + data.ToString("dd/MM/yyyy"));
 
@@ -783,7 +784,8 @@ namespace Report
                     return caminho;
 
                 }
-                else if (Directory.Exists(Path.Combine(camAlterNOAA, GefsNOAA00)) && Directory.Exists(Path.Combine(camAlterNOAA, GfsNOAA00)))
+                #region caminho nao utilizado
+                /*else if (Directory.Exists(Path.Combine(camAlterNOAA, GefsNOAA00)) && Directory.Exists(Path.Combine(camAlterNOAA, GfsNOAA00)))
                 {
                     var pastPrev00 = Path.Combine(@"C:\Files\Trading\Acompanhamento Metereologico Semanal\spiderman", DateTime.Now.ToString("yyyy_MM_dd"), "CONJUNTO00PREV");
 
@@ -920,14 +922,13 @@ namespace Report
                     doc.Close();
 
                     return caminho;
-                }
+                }*/
+                #endregion
             }
             else
             {
                 if (Directory.Exists(Path.Combine(camNOAA, GefsNOAA12)) && Directory.Exists(Path.Combine(camNOAA, GfsNOAA12)))
                 {
-
-
 
                     int hora = 12;
                     var doc = PdfExtensions.NovoPdfPrevs(caminho, data, hora);
@@ -937,7 +938,7 @@ namespace Report
                     var imgsConj = buscaPrevNOAA(caminhoSpider, data, GefsNOAA12, 0, camNOAA, preliminar);
                     var imgsConj1 = buscaPrevNOAA(caminhoSpider, data, GefsNOAA00, 0, camNOAA, preliminar);
 
-
+                    #region mapa nao utlizado
                     //doc.InserirParte2("Previsão de precipitação pelos modelos Conjunto (ETA 40+GEFS)");
 
                     //try
@@ -1003,6 +1004,8 @@ namespace Report
                     //catch { }
 
                     //doc.NovaPagina2();
+                    #endregion
+
                     doc.InserirParte2("Previsão de precipitação pelo modelo GLOBAL ENSEMBLE (GEFS) NOAA 00z e 12z do dia " + data.ToString("dd/MM/yyyy"));
 
                     try
@@ -1036,7 +1039,8 @@ namespace Report
                     return caminho;
 
                 }
-                else if (Directory.Exists(Path.Combine(camAlterNOAA, GefsNOAA12)) && Directory.Exists(Path.Combine(camAlterNOAA, GfsNOAA12)) && Directory.Exists(Path.Combine(caminhoSpider, data.ToString("yyyy_MM_dd"), camGfs12)) && Directory.Exists(Path.Combine(caminhoSpider, data.ToString("yyyy_MM_dd"), camGefs12)))
+                #region caminho nao utilizado
+                /*else if (Directory.Exists(Path.Combine(camAlterNOAA, GefsNOAA12)) && Directory.Exists(Path.Combine(camAlterNOAA, GfsNOAA12)) && Directory.Exists(Path.Combine(caminhoSpider, data.ToString("yyyy_MM_dd"), camGfs12)) && Directory.Exists(Path.Combine(caminhoSpider, data.ToString("yyyy_MM_dd"), camGefs12)))
                 {
                     int hora = 12;
                     var doc = PdfExtensions.NovoPdfPrevs(caminho, data, hora);
@@ -1142,7 +1146,8 @@ namespace Report
                     doc.Close();
 
                     return caminho;
-                }
+                }*/
+                #endregion
             }
 
             return "";
@@ -1158,8 +1163,8 @@ namespace Report
             var camNOAA = Path.Combine(@"B:\Enercore\Energy Core Trading\Energy Core Pricing - Documents\Acompanhamento_de_Precipitacao\Mapas", data.ToString("yyyy"), data.ToString("MM"), data.ToString("dd"));
             var camNOAAOntem = Path.Combine(@"B:\Enercore\Energy Core Trading\Energy Core Pricing - Documents\Acompanhamento_de_Precipitacao\Mapas", data1.ToString("yyyy"), data1.ToString("MM"), data1.ToString("dd"));
 
-            var camAlterNOAA = Path.Combine(@"B:\Compass\OneDrive - MinhaTI\Compass\Pedro\NOAA", data.ToString("yyyy"), data.ToString("MM"), data.ToString("dd"));
-            var camAlterNOAAOntem = Path.Combine(@"B:\Compass\OneDrive - MinhaTI\Compass\Pedro\NOAA", data1.ToString("yyyy"), data1.ToString("MM"), data1.ToString("dd"));
+            // var camAlterNOAA = Path.Combine(@"B:\Compass\OneDrive - MinhaTI\Compass\Pedro\NOAA", data.ToString("yyyy"), data.ToString("MM"), data.ToString("dd"));
+            //var camAlterNOAAOntem = Path.Combine(@"B:\Compass\OneDrive - MinhaTI\Compass\Pedro\NOAA", data1.ToString("yyyy"), data1.ToString("MM"), data1.ToString("dd"));
 
             string GefsNOAA00 = "GEFS_0.5_00";
             string GfsNOAA00 = "GFS00";
@@ -1186,8 +1191,7 @@ namespace Report
 
 
 
-            if (Directory.Exists(Path.Combine(camNOAA, GefsNOAA12)) && Directory.Exists(Path.Combine(camNOAA, GfsNOAA12)) && Directory.Exists(Path.Combine(caminhoSpider, data.ToString("yyyy_MM_dd"), camGfs12)) &&
-                Directory.Exists(Path.Combine(caminhoSpider, data.ToString("yyyy_MM_dd"), camEcwmf12)) && Directory.Exists(Path.Combine(caminhoSpider, data.ToString("yyyy_MM_dd"), camGefs12)))
+            if (Directory.Exists(Path.Combine(camNOAA, GefsNOAA12)) && Directory.Exists(Path.Combine(camNOAA, GfsNOAA12)) && Directory.Exists(Path.Combine(caminhoSpider, data.ToString("yyyy_MM_dd"), camEcwmf12)))
             {
 
 
@@ -1197,10 +1201,12 @@ namespace Report
 
 
 
-                var imgsConj = buscaPrev(caminhoSpider, data, camGefs12, 3);
-                var imgsConj1 = buscaPrev(caminhoSpider, data, camGefs, 3);
+                var imgsConj = buscaPrev(caminhoSpider, data, camEcwmf12, 3);
+                var imgsConj1 = buscaPrev(caminhoSpider, data, camEcwmf, 3);
 
-
+                #region mapas nao utilizados
+                /*&& Directory.Exists(Path.Combine(caminhoSpider, data.ToString("yyyy_MM_dd"), camGefs12))*/
+                /* && Directory.Exists(Path.Combine(caminhoSpider, data.ToString("yyyy_MM_dd"), camGfs12))*/
                 //doc.InserirParte2("Previsão de precipitação pelos modelos Conjunto (ETA 40+GEFS)");
 
                 //try
@@ -1241,6 +1247,7 @@ namespace Report
                 //catch { }
 
                 //doc.NovaPagina2();
+                #endregion
 
                 doc.InserirParte2("Previsão de precipitação pelo modelo EUROPEU (ECMWF) 00z e 12z do dia " + data.ToString("dd/MM/yyyy"));
 
@@ -1257,6 +1264,7 @@ namespace Report
 
                 //doc.InserirEspaco();
                 doc.InserirMeioEspaco();
+                #region mapas nao utilizados
                 //doc.InserirParte2("Previsão de precipitação pelo modelo REGIONAL (ETA40)");
                 //try
                 //{
@@ -1268,6 +1276,8 @@ namespace Report
                 //catch { }
 
                 //doc.NovaPagina2();
+                #endregion
+
                 doc.InserirParte2("Previsão de precipitação pelo modelo GLOBAL ENSEMBLE (GEFS) NOAA 00z e 12z do dia " + data.ToString("dd/MM/yyyy"));
 
                 try
@@ -1303,7 +1313,9 @@ namespace Report
                 return caminho;
 
             }
-            else if (Directory.Exists(Path.Combine(camAlterNOAA, GefsNOAA12)) && Directory.Exists(Path.Combine(camAlterNOAA, GfsNOAA12)) && Directory.Exists(Path.Combine(caminhoSpider, data.ToString("yyyy_MM_dd"), camGfs12)) && Directory.Exists(Path.Combine(caminhoSpider, data.ToString("yyyy_MM_dd"), camEcwmf12)) && Directory.Exists(Path.Combine(caminhoSpider, data.ToString("yyyy_MM_dd"), camGefs12)))
+
+            #region caminho nao utilizado
+            /*else if (Directory.Exists(Path.Combine(camAlterNOAA, GefsNOAA12)) && Directory.Exists(Path.Combine(camAlterNOAA, GfsNOAA12)) && Directory.Exists(Path.Combine(caminhoSpider, data.ToString("yyyy_MM_dd"), camGfs12)) && Directory.Exists(Path.Combine(caminhoSpider, data.ToString("yyyy_MM_dd"), camEcwmf12)) && Directory.Exists(Path.Combine(caminhoSpider, data.ToString("yyyy_MM_dd"), camGefs12)))
             {
                 int hora = 12;
                 var doc = PdfExtensions.NovoPdfPrevs(caminho, data, hora);
@@ -1410,7 +1422,8 @@ namespace Report
                 doc.Close();
 
                 return caminho;
-            }
+            }*/
+            #endregion
 
 
             return "";
