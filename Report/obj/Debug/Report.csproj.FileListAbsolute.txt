@@ -124,3 +124,17 @@ C:\Compass\MIGRACAO\chuva_vazao - Azure\chuva_vazao - Azure\Report\obj\Debug\Rep
 C:\Compass\MIGRACAO\chuva_vazao - Azure\chuva_vazao - Azure\Report\obj\Debug\Report.dll
 C:\Compass\MIGRACAO\chuva_vazao - Azure\chuva_vazao - Azure\Report\obj\Debug\Report.pdb
 C:\Development\chuva_vazao - Azure\Report\obj\Debug\Report.csproj.AssemblyReference.cache
+C:\Development\Chuva_vazao-Azure\Report\bin\Debug\Report.dll
+C:\Development\Chuva_vazao-Azure\Report\bin\Debug\Report.pdb
+C:\Development\Chuva_vazao-Azure\Report\bin\Debug\Grads.dll
+C:\Development\Chuva_vazao-Azure\Report\bin\Debug\itextsharp.dll
+C:\Development\Chuva_vazao-Azure\Report\bin\Debug\itextsharp.xmlworker.dll
+C:\Development\Chuva_vazao-Azure\Report\bin\Debug\Tools.dll
+C:\Development\Chuva_vazao-Azure\Report\bin\Debug\Grads.pdb
+C:\Development\Chuva_vazao-Azure\Report\bin\Debug\Tools.pdb
+C:\Development\Chuva_vazao-Azure\Report\bin\Debug\itextsharp.xml
+C:\Development\Chuva_vazao-Azure\Report\obj\Debug\Report.csproj.AssemblyReference.cache
+C:\Development\Chuva_vazao-Azure\Report\obj\Debug\Report.csproj.CoreCompileInputs.cache
+C:\Development\Chuva_vazao-Azure\Report\obj\Debug\Report.csproj.CopyComplete
+C:\Development\Chuva_vazao-Azure\Report\obj\Debug\Report.dll
+C:\Development\Chuva_vazao-Azure\Report\obj\Debug\Report.pdb

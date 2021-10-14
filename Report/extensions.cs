@@ -53,7 +53,7 @@ namespace Report
             //espaço.Add(esp0);
             //doc.Add(espaço);
 
-            string tit = "RELATÓRIO COMPASS - " + data.ToString("dd/MM/yyyy") + " (" + hora.ToString() + " hrs)";
+            string tit = "RELATÓRIO ENERCORE - " + data.ToString("dd/MM/yyyy") + " (" + hora.ToString() + " hrs)";
             titulo.Add(tit);
             doc.Add(titulo);
 
@@ -98,7 +98,7 @@ namespace Report
             //espaço.Add(esp0);
             //doc.Add(espaço);
 
-            string tit = "RELATÓRIO COMPASS - " + data.ToString("dd/MM/yyyy") + " (" + hora.ToString() + " hrs)";
+            string tit = "RELATÓRIO ENERCORE - " + data.ToString("dd/MM/yyyy") + " (" + hora.ToString() + " hrs)";
             titulo.Add(tit);
             doc.Add(titulo);
 

@@ -394,3 +394,47 @@ C:\Compass\MIGRACAO\chuva_vazao - Azure\chuva_vazao - Azure\ChuvaVazaoTools\obj\
 C:\Compass\MIGRACAO\chuva_vazao - Azure\chuva_vazao - Azure\ChuvaVazaoTools\obj\Debug\ChuvaVazaoTools.application
 C:\Compass\MIGRACAO\chuva_vazao - Azure\chuva_vazao - Azure\ChuvaVazaoTools\obj\Debug\ChuvaVazaoTools.csproj.CopyComplete
 C:\Development\chuva_vazao - Azure\ChuvaVazaoTools\obj\Debug\ChuvaVazaoTools.csproj.AssemblyReference.cache
+C:\Development\Chuva_vazao-Azure\ChuvaVazaoTools\bin\Debug\PRECIPITACAO_VIES.txt
+C:\Development\Chuva_vazao-Azure\ChuvaVazaoTools\bin\Debug\INICIALIZACAO.txt
+C:\Development\Chuva_vazao-Azure\ChuvaVazaoTools\bin\Debug\INICIALIZACAO_VAZAO.txt
+C:\Development\Chuva_vazao-Azure\ChuvaVazaoTools\bin\Debug\MAPA.txt
+C:\Development\Chuva_vazao-Azure\ChuvaVazaoTools\bin\Debug\POSTOS_PLU.txt
+C:\Development\Chuva_vazao-Azure\ChuvaVazaoTools\bin\Debug\ChuvaVazaoTools.exe.config
+C:\Development\Chuva_vazao-Azure\ChuvaVazaoTools\bin\Debug\ChuvaVazaoTools.exe.manifest
+C:\Development\Chuva_vazao-Azure\ChuvaVazaoTools\bin\Debug\ChuvaVazaoTools.application
+C:\Development\Chuva_vazao-Azure\ChuvaVazaoTools\bin\Debug\ChuvaVazaoTools.exe
+C:\Development\Chuva_vazao-Azure\ChuvaVazaoTools\bin\Debug\ChuvaVazaoTools.pdb
+C:\Development\Chuva_vazao-Azure\ChuvaVazaoTools\bin\Debug\AnimatedGif.dll
+C:\Development\Chuva_vazao-Azure\ChuvaVazaoTools\bin\Debug\EntityFramework.dll
+C:\Development\Chuva_vazao-Azure\ChuvaVazaoTools\bin\Debug\EntityFramework.SqlServer.dll
+C:\Development\Chuva_vazao-Azure\ChuvaVazaoTools\bin\Debug\GMap.NET.Core.dll
+C:\Development\Chuva_vazao-Azure\ChuvaVazaoTools\bin\Debug\GMap.NET.WindowsForms.dll
+C:\Development\Chuva_vazao-Azure\ChuvaVazaoTools\bin\Debug\Grads.dll
+C:\Development\Chuva_vazao-Azure\ChuvaVazaoTools\bin\Debug\Newtonsoft.Json.dll
+C:\Development\Chuva_vazao-Azure\ChuvaVazaoTools\bin\Debug\Ookii.Dialogs.dll
+C:\Development\Chuva_vazao-Azure\ChuvaVazaoTools\bin\Debug\Report.dll
+C:\Development\Chuva_vazao-Azure\ChuvaVazaoTools\bin\Debug\Tools.dll
+C:\Development\Chuva_vazao-Azure\ChuvaVazaoTools\bin\Debug\itextsharp.dll
+C:\Development\Chuva_vazao-Azure\ChuvaVazaoTools\bin\Debug\Grads.pdb
+C:\Development\Chuva_vazao-Azure\ChuvaVazaoTools\bin\Debug\Report.pdb
+C:\Development\Chuva_vazao-Azure\ChuvaVazaoTools\bin\Debug\Tools.pdb
+C:\Development\Chuva_vazao-Azure\ChuvaVazaoTools\bin\Debug\EntityFramework.xml
+C:\Development\Chuva_vazao-Azure\ChuvaVazaoTools\bin\Debug\EntityFramework.SqlServer.xml
+C:\Development\Chuva_vazao-Azure\ChuvaVazaoTools\bin\Debug\Ookii.Dialogs.xml
+C:\Development\Chuva_vazao-Azure\ChuvaVazaoTools\bin\Debug\itextsharp.xml
+C:\Development\Chuva_vazao-Azure\ChuvaVazaoTools\obj\Debug\ChuvaVazaoTools.csproj.AssemblyReference.cache
+C:\Development\Chuva_vazao-Azure\ChuvaVazaoTools\obj\Debug\ChuvaVazaoTools.ChuvaViewer.resources
+C:\Development\Chuva_vazao-Azure\ChuvaVazaoTools\obj\Debug\ChuvaVazaoTools.DownloadForm.resources
+C:\Development\Chuva_vazao-Azure\ChuvaVazaoTools\obj\Debug\ChuvaVazaoTools.FrmMain.resources
+C:\Development\Chuva_vazao-Azure\ChuvaVazaoTools\obj\Debug\ChuvaVazaoTools.PrevViewer.resources
+C:\Development\Chuva_vazao-Azure\ChuvaVazaoTools\obj\Debug\ChuvaVazaoTools.Properties.Resources.resources
+C:\Development\Chuva_vazao-Azure\ChuvaVazaoTools\obj\Debug\ChuvaVazaoTools.TempViewer.resources
+C:\Development\Chuva_vazao-Azure\ChuvaVazaoTools\obj\Debug\ChuvaVazaoTools.WaitForm2.resources
+C:\Development\Chuva_vazao-Azure\ChuvaVazaoTools\obj\Debug\ChuvaVazaoTools.WaitForm.resources
+C:\Development\Chuva_vazao-Azure\ChuvaVazaoTools\obj\Debug\ChuvaVazaoTools.csproj.GenerateResource.cache
+C:\Development\Chuva_vazao-Azure\ChuvaVazaoTools\obj\Debug\ChuvaVazaoTools.csproj.CoreCompileInputs.cache
+C:\Development\Chuva_vazao-Azure\ChuvaVazaoTools\obj\Debug\ChuvaVazaoTools.exe.manifest
+C:\Development\Chuva_vazao-Azure\ChuvaVazaoTools\obj\Debug\ChuvaVazaoTools.application
+C:\Development\Chuva_vazao-Azure\ChuvaVazaoTools\obj\Debug\ChuvaVazaoTools.csproj.CopyComplete
+C:\Development\Chuva_vazao-Azure\ChuvaVazaoTools\obj\Debug\ChuvaVazaoTools.exe
+C:\Development\Chuva_vazao-Azure\ChuvaVazaoTools\obj\Debug\ChuvaVazaoTools.pdb

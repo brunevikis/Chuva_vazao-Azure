@@ -2301,7 +2301,7 @@ namespace ChuvaVazaoTools
                     else
                     {
                         enaSem.AppendFormat("{0,-20}",
-                               bac.Replace("XINGU", "AMOZONAS - BELO MONTE").ToString());
+                               bac.Replace("XINGU", "AMAZONAS - BELO MONTE").ToString());
                         foreach (var item in dats.Keys.ToList())
                         {
                             double resultado = 0;
@@ -2310,7 +2310,7 @@ namespace ChuvaVazaoTools
                             {
                                 resultado += post.DadoEna[item];
                             }
-                            Tuple<string, DateTime, double> rDado = new Tuple<string, DateTime, double>(bac.Replace("XINGU", "AMOZONAS - BELO MONTE").ToString(), item, resultado);
+                            Tuple<string, DateTime, double> rDado = new Tuple<string, DateTime, double>(bac.Replace("XINGU", "AMAZONAS - BELO MONTE").ToString(), item, resultado);
                             ReeDados.Add(rDado);
 
                             enaSem.AppendFormat("{0,15}",
@@ -2699,7 +2699,7 @@ namespace ChuvaVazaoTools
                     else
                     {
                         enaDia.AppendFormat("{0,-20}",
-                               bac.Replace("XINGU", "AMOZONAS - BELO MONTE").ToString());
+                               bac.Replace("XINGU", "AMAZONAS - BELO MONTE").ToString());
                         foreach (var item in dias)
                         {
                             double resultado = 0;
@@ -2708,7 +2708,7 @@ namespace ChuvaVazaoTools
                             {
                                 resultado += post.DadoEna[item];
                             }
-                            Tuple<string, DateTime, double> rDado = new Tuple<string, DateTime, double>(bac.Replace("XINGU", "AMOZONAS - BELO MONTE").ToString(), item, resultado);
+                            Tuple<string, DateTime, double> rDado = new Tuple<string, DateTime, double>(bac.Replace("XINGU", "AMAZONAS - BELO MONTE").ToString(), item, resultado);
                             ReeDadoDia.Add(rDado);
 
                             enaDia.AppendFormat("{0,15}",
