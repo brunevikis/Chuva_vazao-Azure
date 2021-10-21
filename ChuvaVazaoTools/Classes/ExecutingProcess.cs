@@ -3043,7 +3043,7 @@ namespace ChuvaVazaoTools.Classes
 
                 var pastaBase = @"C:\Files\Middle - Preço\Acompanhamento de vazões\" + currRev.revDate.ToString("MM_yyyy") + @"\Dados_de_Entrada_e_Saida_" + currRev.revDate.ToString("yyyyMM") + "_RV" + currRev.rev.ToString();
 
-                var PathModelo = Path.Combine(pastaBase, "Modelos_Chuva_Vazao", "CPINS", "Arq_Saida");
+                var PathModelo = Path.Combine(pastaBase, "Modelos_Chuva_Vazao_Shadow", "CPINS", "Arq_Saida");
                 DateTime dt_CPINS = DateTime.Today;
                 var Arquivo = Path.Combine(PathModelo, dt_CPINS.ToString("dd-MM-yyyy") + "_PLANILHA_USB.txt");
 
