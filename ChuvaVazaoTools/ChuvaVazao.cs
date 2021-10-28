@@ -57,7 +57,7 @@ namespace ChuvaVazaoTools
             var data_verifica = DateTime.Today;
             var runRev = ChuvaVazaoTools.Tools.Tools.GetCurrRev(data_verifica);
             var acomph_atual = File.Exists(Path.Combine(@"C:\Files\Middle - Preço\Acompanhamento de vazões\ACOMPH\1_historico", data_verifica.ToString("yyyy"), data_verifica.ToString("MM_yyyy"), "ACOMPH_" + data_verifica.ToString("dd-MM-yyyy") + ".xls"));
-            var modelos_atual = File.Exists(Path.Combine(@"C:\Files\Middle - Preço\Acompanhamento de vazões", runRev.revDate.ToString("MM_yyyy"), @"Dados_de_Entrada_e_Saida_" + runRev.revDate.ToString("yyyyMM") + "_RV" + runRev.rev, @"Modelos_Chuva_Vazao_Shadow\CPINS\Arq_Saida", data_verifica.ToString("dd-MM-yyyy") + "_PLANILHA_USB.txt"));
+            var modelos_atual = File.Exists(Path.Combine(@"C:\Files\Middle - Preço\Acompanhamento de vazões", runRev.revDate.ToString("MM_yyyy"), @"Dados_de_Entrada_e_Saida_" + runRev.revDate.ToString("yyyyMM") + "_RV" + runRev.rev, @"Modelos_Chuva_Vazao\CPINS\Arq_Saida", data_verifica.ToString("dd-MM-yyyy") + "_PLANILHA_USB.txt"));
 
 
             var ls = System.IO.File.ReadLines(p);
@@ -111,7 +111,7 @@ namespace ChuvaVazaoTools
             Preciptacao
                 .OrderByDescending(x => x.Key).Take(120)
                 .OrderBy(x => x.Key).ToList().ForEach(x => cont.AppendLine(
-                               string.Join(" ", this.Codigo, x.Key.ToString("dd/MM/yyyy"), "1000", x.Value.HasValue ? x.Value.Value.ToString("0.0", System.Globalization.NumberFormatInfo.InvariantInfo) : "-")
+                               string.Join(" ", this.Codigo, x.Key.ToString("dd/MM/yyyy"), "1000", x.Value.HasValue ? x.Value.Value.ToString("0.00", System.Globalization.NumberFormatInfo.InvariantInfo) : "-")
                 ));
 
             System.IO.File.WriteAllText(c, cont.ToString());
@@ -162,7 +162,7 @@ namespace ChuvaVazaoTools
                 Vazoes
                 .OrderByDescending(x => x.Key).Take(120)
                 .OrderBy(x => x.Key).Select(x =>
-                  string.Join("|", key, x.Key.ToString("yyyy-MM-dd hh:mm:ss"), x.Value.ToString("0.0", System.Globalization.NumberFormatInfo.InvariantInfo))
+                  string.Join("|", key, x.Key.ToString("yyyy-MM-dd hh:mm:ss"), x.Value.ToString("0.00", System.Globalization.NumberFormatInfo.InvariantInfo))
                 ).ToArray()
             );
         }
@@ -173,7 +173,7 @@ namespace ChuvaVazaoTools
             var data_verifica = DateTime.Today;
             var runRev = ChuvaVazaoTools.Tools.Tools.GetCurrRev(data_verifica);
             var acomph_atual = File.Exists(Path.Combine(@"C:\Files\Middle - Preço\Acompanhamento de vazões\ACOMPH\1_historico", data_verifica.ToString("yyyy"), data_verifica.ToString("MM_yyyy"), "ACOMPH_" + data_verifica.ToString("dd-MM-yyyy") + ".xls"));
-            var modelos_atual = File.Exists(Path.Combine(@"C:\Files\Middle - Preço\Acompanhamento de vazões", runRev.revDate.ToString("MM_yyyy"), @"Dados_de_Entrada_e_Saida_" + runRev.revDate.ToString("yyyyMM") + "_RV" + runRev.rev, @"Modelos_Chuva_Vazao_Shadow\CPINS\Arq_Saida", data_verifica.ToString("dd-MM-yyyy") + "_PLANILHA_USB.txt"));
+            var modelos_atual = File.Exists(Path.Combine(@"C:\Files\Middle - Preço\Acompanhamento de vazões", runRev.revDate.ToString("MM_yyyy"), @"Dados_de_Entrada_e_Saida_" + runRev.revDate.ToString("yyyyMM") + "_RV" + runRev.rev, @"Modelos_Chuva_Vazao\CPINS\Arq_Saida", data_verifica.ToString("dd-MM-yyyy") + "_PLANILHA_USB.txt"));
 
             Vazoes = new Dictionary<DateTime, float>();
 
